@@ -55,7 +55,7 @@ export default function TabWidget() {
                   initial={false}
                   transition={{
                     type: "spring",
-                    stiffness: 500,
+                    stiffness: 200,
                     damping: 30
                   }}
                 />
