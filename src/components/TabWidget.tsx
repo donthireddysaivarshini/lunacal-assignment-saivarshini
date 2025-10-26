@@ -5,11 +5,11 @@ import { HelpCircle } from 'lucide-react';
 type TabType = 'about' | 'experiences' | 'recommended';
 
 const tabContent: Record<TabType, string> = {
-about: "Hi! I'm Donthireddy Sai Varshini, an AI-native Frontend & Full Stack Developer passionate about building smart, interactive web experiences. I love turning ideas into digital products using React, Next.js, and Gemini AI. Based in Hyderabad, I'm currently pursuing my B.Tech in Computer Science (IoT) and enjoy exploring creative tech projects in my free time.",
+about: "Hi! I'm Donthireddy Sai Varshini, an AI-native Frontend & Full Stack Developer passionate about building smart, interactive web experiences. I love turning ideas into digital products using React, Next.js, and Gemini AI. \n\nBased in Hyderabad, I'm currently pursuing my B.Tech in Computer Science (IoT) and enjoy exploring creative tech projects in my free time.",
 
-experiences: "I've gained practical experience through projects and internships, developing AI-powered apps and full stack systems. At Infosys Springboard, I built responsive dashboards and intelligent web scrapers that improved performance by 15%. I also mentor students in coding, helping them strengthen problem-solving and logic-building skills.",
+experiences: "I've gained practical experience through projects and internships, developing AI-powered apps and full stack systems. At Infosys Springboard, I built responsive dashboards and intelligent web scrapers that improved performance by 15%.\n\n I also mentor students in coding, helping them strengthen problem-solving and logic-building skills.",
 
-recommended: "I recommend focusing on creativity and adaptability while learning to build modern web solutions. Stay curious, explore new tools, and experiment fearlessly. Success in tech comes from combining problem-solving with a user-first mindset and continuous learning."
+recommended: "I recommend focusing on creativity and adaptability while learning to build modern web solutions. Stay curious, explore new tools, and experiment fearlessly. \n\nSuccess in tech comes from combining problem-solving with a user-first mindset and continuous learning."
 
 };
 
@@ -79,7 +79,7 @@ export default function TabWidget() {
               fontFamily: 'Plus Jakarta Sans, sans-serif', 
               fontWeight: 400, 
               fontSize: '20px',
-              lineHeight: '100%', 
+              lineHeight: '150%', 
               letterSpacing: '0.5px'
             }}
           >
