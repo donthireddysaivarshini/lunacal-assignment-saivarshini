@@ -49,7 +49,7 @@ export default function GalleryWidget() {
         </div>
       </div>
 
-      <div className="ml-12">
+     <div className="ml-12 overflow-x-hidden">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-12">
             <button className="bg-black px-10 py-4 rounded-[20px]">
@@ -97,7 +97,7 @@ export default function GalleryWidget() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden" style={{ perspective: '1000px' }}>
+<div className="relative" style={{ perspective: '1000px' }}>
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"
             style={{
