@@ -5,9 +5,9 @@ import { HelpCircle } from 'lucide-react';
 type TabType = 'about' | 'experiences' | 'recommended';
 
 const tabContent: Record<TabType, string> = {
-about: "Hi! I'm Donthireddy Sai Varshini, an AI-native Frontend & Full Stack Developer passionate about building smart, interactive web experiences. I love turning ideas into digital products using React, Next.js, and Gemini AI. Based in Hyderabad, I’m currently pursuing my B.Tech in Computer Science (IoT) and enjoy exploring creative tech projects in my free time.",
+about: "Hi! I'm Donthireddy Sai Varshini, an AI-native Frontend & Full Stack Developer passionate about building smart, interactive web experiences. I love turning ideas into digital products using React, Next.js, and Gemini AI. Based in Hyderabad, I'm currently pursuing my B.Tech in Computer Science (IoT) and enjoy exploring creative tech projects in my free time.",
 
-experiences: "I’ve gained practical experience through projects and internships, developing AI-powered apps and full stack systems. At Infosys Springboard, I built responsive dashboards and intelligent web scrapers that improved performance by 15%. I also mentor students in coding, helping them strengthen problem-solving and logic-building skills.",
+experiences: "I've gained practical experience through projects and internships, developing AI-powered apps and full stack systems. At Infosys Springboard, I built responsive dashboards and intelligent web scrapers that improved performance by 15%. I also mentor students in coding, helping them strengthen problem-solving and logic-building skills.",
 
 recommended: "I recommend focusing on creativity and adaptability while learning to build modern web solutions. Stay curious, explore new tools, and experiment fearlessly. Success in tech comes from combining problem-solving with a user-first mindset and continuous learning."
 
@@ -73,7 +73,16 @@ export default function TabWidget() {
           className="rounded-[27px] p-8 border border-[#96BEE7]"
           style={{ backgroundColor: 'rgba(97, 97, 97, 0.82)' }}
         >
-          <p className="text-[#969696] text-[20px] whitespace-pre-line" style={{ fontFamily: 'Plus Jakarta Sans', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
+          <p 
+            className="text-[#969696] whitespace-pre-line" 
+            style={{ 
+              fontFamily: 'Plus Jakarta Sans, sans-serif', 
+              fontWeight: 400, 
+              fontSize: '20px',
+              lineHeight: '100%', 
+              letterSpacing: '0%'
+            }}
+          >
             {tabContent[activeTab]}
           </p>
         </div>
