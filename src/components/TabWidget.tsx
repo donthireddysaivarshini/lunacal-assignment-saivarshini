@@ -32,20 +32,20 @@ export default function TabWidget() {
         </div>
       </div>
 
-      <div className="bg-[#171717] rounded-[23px] p-6 ml-12" style={{ boxShadow: 'inset 0px 4.96px 12.4px 2.48px rgba(0, 0, 0, 0.25)' }}>
-        <div className="relative flex items-center gap-[6px] mb-8">
+      <div className="bg-[#363C43] rounded-[23px] p-6 ml-12" style={{ boxShadow: 'inset 0px 4.96px 12.4px 2.48px rgba(0, 0, 0, 0.25)' }}>
+        <div className="relative flex items-center gap-[6px] mb-8 bg-[#171717] rounded-[20px] p-1">
           <div
             className="absolute h-[49px] w-[195px] bg-[#28292F] rounded-[16px] transition-all duration-300 ease-in-out"
             style={{
-              left: `${tabs.findIndex(t => t.id === activeTab) * 201}px`,
-              boxShadow: '-8.43px -16.87px 50.6px -16.87px #485B71, 13.49px 16.87px 67.47px 8.43px #0A0A0A'
+              left: `${tabs.findIndex(t => t.id === activeTab) * 201 + 4}px`,
+              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)'
             }}
           />
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative h-[49px] w-[195px] rounded-[16px] font-medium text-[18px] transition-all duration-300 z-10 ${
+              className={`relative h-[49px] w-[195px] rounded-[16px] font-medium text-[16px] transition-all duration-300 z-10 ${
                 activeTab === tab.id
                   ? 'text-white'
                   : 'text-[#A3ADB2]'
