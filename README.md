@@ -143,7 +143,7 @@ npm run preview
    - **Framework Preset:** Vite
    - **Build Command:** `npm run build`
    - **Output Directory:** `dist`
-4. Deploy!
+4. Deploy!!
 
 ---
 
