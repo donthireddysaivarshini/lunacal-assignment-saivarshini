@@ -81,7 +81,7 @@ export default function TabWidget() {
             style={{ 
               fontFamily: 'Plus Jakarta Sans, sans-serif', 
               fontWeight: 400, 
-              fontSize: '16px',
+              fontSize: '18px',
               lineHeight: '130%', 
               letterSpacing: '0.5px'
             }}
