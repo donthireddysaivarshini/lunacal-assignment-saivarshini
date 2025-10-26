@@ -55,15 +55,16 @@ export default function TabWidget() {
                   initial={false}
                   transition={{
                     type: "spring",
-                    stiffness: 200,
-                    damping: 30
+                    stiffness: 150,
+                    damping: 35
                   }}
                 />
               )}
               {activeTab !== tab.id && (
                 <div
-                  className="absolute inset-0 bg-[#28292F] rounded-[16px] opacity-0 hover:opacity-40 transition-opacity duration-200 -z-10"
-                />
+  className="absolute inset-0 bg-[#28292F] rounded-[16px] opacity-0 group-hover:opacity-40 transition-opacity duration-300 -z-10"
+/>
+
               )}
             </button>
           ))}
