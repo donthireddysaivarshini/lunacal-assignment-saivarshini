@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { ArrowLeft, ArrowRight, HelpCircle } from 'lucide-react';
 
 const sampleImages = [
-  'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600',
-  'https://images.pexels.com/photos/2977304/pexels-photo-2977304.jpeg?auto=compress&cs=tinysrgb&w=600',
-  'https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&w=600',
-  'https://images.pexels.com/photos/4254157/pexels-photo-4254157.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/941555/pexels-photo-941555.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/15104217/pexels-photo-15104217.jpeg?auto=compress&cs=tinysrgb&w=600',
   'https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=600',
   'https://images.pexels.com/photos/3894378/pexels-photo-3894378.jpeg?auto=compress&cs=tinysrgb&w=600'
 ];
