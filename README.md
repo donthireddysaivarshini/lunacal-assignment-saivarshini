@@ -9,8 +9,6 @@
 
 **A modern, interactive widget dashboard featuring smooth animations and elegant design**
 
-[Live Demo](#) • [Features](#features) • [Installation](#installation) • [Tech Stack](#tech-stack)
-
 </div>
 
 ---
@@ -123,26 +121,6 @@ An interactive image gallery with horizontal scrolling:
 - Image error handling with fallback
 - Disabled state management for navigation buttons
 - Custom gradient backgrounds and shadows
-
----
-
-## 🎨 Design System
-
-### Colors
-```css
-Primary Background: #363C43
-Secondary Background: #171717
-Active Tab: #28292F
-Text Primary: #FFFFFF
-Text Secondary: #A3ADB2
-Border Accent: #96BEE7
-```
-
-### Typography
-- **Headings:** Poppins, Semi-bold, 20px
-- **Body Text:** Plus Jakarta Sans, Regular, 20px
-- **Line Height:** 100%
-- **Letter Spacing:** 0%
 
 ---
 
