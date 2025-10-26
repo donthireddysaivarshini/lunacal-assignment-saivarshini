@@ -72,23 +72,19 @@ export default function TabWidget() {
 
         </div>
 
-        <div
-          className="rounded-[27px] p-8 border border-[#96BEE7]"
-          style={{ backgroundColor: 'rgba(97, 97, 97, 0.82)' }}
+{/* This <p> tag replaces the inner box you wanted to remove */}
+        <p 
+          className="text-[#A3ADB2] whitespace-pre-line" // Text color changed to be light, like in your image
+          style={{ 
+            fontFamily: 'Plus Jakarta Sans, sans-serif', 
+            fontWeight: 400, 
+            fontSize: '18px',
+            lineHeight: '130%', 
+            letterSpacing: '0.5px'
+          }}
         >
-          <p 
-            className="text-[#969696] whitespace-pre-line" 
-            style={{ 
-              fontFamily: 'Plus Jakarta Sans, sans-serif', 
-              fontWeight: 400, 
-              fontSize: '18px',
-              lineHeight: '130%', 
-              letterSpacing: '0.5px'
-            }}
-          >
-            {tabContent[activeTab]}
-          </p>
-        </div>
+          {tabContent[activeTab]}
+        </p>
       </div>
     </div>
   );
