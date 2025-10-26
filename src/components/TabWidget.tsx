@@ -80,7 +80,7 @@ export default function TabWidget() {
               fontWeight: 400, 
               fontSize: '20px',
               lineHeight: '100%', 
-              letterSpacing: '0%'
+              letterSpacing: '0.5px'
             }}
           >
             {tabContent[activeTab]}
