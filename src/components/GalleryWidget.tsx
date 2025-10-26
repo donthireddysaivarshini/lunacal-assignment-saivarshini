@@ -111,7 +111,7 @@ export default function GalleryWidget() {
                 className="flex-shrink-0 w-[calc(33.333%-16px)] aspect-square relative group cursor-pointer"
                 whileHover={{
                   scale: 1.15,
-                  rotate: 3,
+                  rotate: -3,
                   zIndex: 20,
                   transition: {
                     duration: 0.3,
