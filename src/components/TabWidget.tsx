@@ -4,9 +4,12 @@ import { HelpCircle } from 'lucide-react';
 type TabType = 'about' | 'experiences' | 'recommended';
 
 const tabContent: Record<TabType, string> = {
-  about: "Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now.\n\nI was born and raised in Albany, NY& have been living in Santa Carla for the past 10 years my wife Tiffany and my 4 year old twin daughters- Emma and Ella. Both of them are just starting school, so my calender is usually blocked between 9-10 AM. This is a...",
-  experiences: "I have extensive experience in enterprise software sales, working with Fortune 500 companies to implement scalable CRM solutions. My expertise includes customer relationship management, sales strategy development, and team leadership.\n\nThroughout my career, I've successfully closed deals worth over $50M and have consistently exceeded quarterly targets by 120%.",
-  recommended: "Based on my experience, I highly recommend focusing on building strong customer relationships and understanding their unique pain points. Success in sales comes from being a trusted advisor rather than just a vendor.\n\nI also recommend continuous learning and staying updated with the latest CRM technologies and sales methodologies."
+about: "Hello! I'm Donthireddy Sai Varshini, an AI-native Frontend & Full Stack Developer passionate about blending creativity with technology. I've been exploring the intersection of web development and AI for the past few years, creating intelligent, human-like interfaces.\n\nI was born and raised in Hyderabad, where I’m currently pursuing my B.Tech in Computer Science (IoT). When I’m not coding, I enjoy mentoring students, exploring design ideas, and experimenting with conversational AI experiences that make technology feel more personal.",
+  
+experiences: "I have hands-on experience in full stack development and AI-powered frontend engineering, having built production-ready applications using React, Next.js, TypeScript, and Google Gemini AI.\n\nDuring my internship at Infosys Springboard, I developed high-performance dashboards and smart web scrapers that improved efficiency by 15%. As a freelance mentor, I’ve guided over 10 students in mastering coding fundamentals, helping them improve their performance by up to 20%.",
+  
+recommended: "Based on my experience, I highly recommend embracing the shift toward AI-native development — where interfaces think, learn, and adapt to users. Building meaningful digital experiences starts with empathy, clarity, and innovation.\n\nI also recommend continuous experimentation — explore, break, rebuild, and evolve your ideas. The best developers are lifelong learners who turn curiosity into creativity."
+
 };
 
 export default function TabWidget() {
