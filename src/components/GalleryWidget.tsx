@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, HelpCircle } from 'lucide-react';
 
 const sampleImages = [
@@ -96,28 +97,50 @@ export default function GalleryWidget() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden" style={{ perspective: '1000px' }}>
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"
             style={{
-              transform: `translateX(-${currentIndex * (100 / 3 + 2)}%)`
+              transform: `translateX(-${currentIndex * (100 / 3 + 2)}%)`,
+              transformStyle: 'preserve-3d'
             }}
           >
             {images.map((image, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="flex-shrink-0 w-[calc(33.333%-16px)] aspect-square relative group"
+                className="flex-shrink-0 w-[calc(33.333%-16px)] aspect-square relative group cursor-pointer"
+                whileHover={{
+                  scale: 1.15,
+                  rotate: 3,
+                  zIndex: 20,
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }
+                }}
               >
                 <img
                   src={image}
                   alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover rounded-[24px] transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:rotate-1 grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover rounded-[24px] transition-all duration-300 ease-in-out grayscale group-hover:grayscale-0"
+                  style={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
                   onError={(e) => {
                     e.currentTarget.src = 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600';
                   }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 ease-in-out rounded-[24px]" />
-              </div>
+                <motion.div
+                  className="absolute inset-0 bg-black rounded-[24px]"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.15 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.div
+                  className="absolute inset-0 rounded-[24px]"
+                  initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
+                  whileHover={{ boxShadow: '0px 20px 40px rgba(0, 0, 0, 0.6)' }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
             ))}
           </div>
         </div>

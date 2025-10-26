@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { HelpCircle } from 'lucide-react';
 
 type TabType = 'about' | 'experiences' | 'recommended';
@@ -34,13 +35,6 @@ export default function TabWidget() {
 
       <div className="bg-[#363C43] rounded-[23px] p-6 ml-12" style={{ boxShadow: 'inset 0px 4.96px 12.4px 2.48px rgba(0, 0, 0, 0.25)' }}>
         <div className="relative flex items-center gap-[6px] mb-8 bg-[#171717] rounded-[20px] p-1">
-          <div
-            className="absolute h-[49px] w-[195px] bg-[#28292F] rounded-[16px] transition-all duration-300 ease-in-out"
-            style={{
-              left: `${tabs.findIndex(t => t.id === activeTab) * 201 + 4}px`,
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)'
-            }}
-          />
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -48,11 +42,29 @@ export default function TabWidget() {
               className={`relative h-[49px] w-[195px] rounded-[16px] font-medium text-[16px] transition-all duration-300 z-10 ${
                 activeTab === tab.id
                   ? 'text-white'
-                  : 'text-[#A3ADB2]'
+                  : 'text-[#A3ADB2] hover:text-[#C5CDD2]'
               }`}
               style={{ fontFamily: 'Poppins, sans-serif', lineHeight: '16px' }}
             >
               {tab.label}
+              {activeTab === tab.id && (
+                <motion.div
+                  layoutId="active-tab-bg"
+                  className="absolute inset-0 bg-[#28292F] rounded-[16px] -z-10"
+                  style={{ boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)' }}
+                  initial={false}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                    damping: 30
+                  }}
+                />
+              )}
+              {activeTab !== tab.id && (
+                <div
+                  className="absolute inset-0 bg-[#28292F] rounded-[16px] opacity-0 hover:opacity-40 transition-opacity duration-200 -z-10"
+                />
+              )}
             </button>
           ))}
         </div>
@@ -61,7 +73,7 @@ export default function TabWidget() {
           className="rounded-[27px] p-8 border border-[#96BEE7]"
           style={{ backgroundColor: 'rgba(97, 97, 97, 0.82)' }}
         >
-          <p className="text-[#969696] text-[20px] leading-[25px] whitespace-pre-line" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+          <p className="text-[#969696] text-[20px] whitespace-pre-line" style={{ fontFamily: 'Plus Jakarta Sans', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
             {tabContent[activeTab]}
           </p>
         </div>
